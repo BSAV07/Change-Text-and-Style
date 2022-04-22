@@ -15,13 +15,22 @@
 <script>
     const content = document.querySelector('.content');
 
-    content.innerHTML = '<h1>I love Zelda</h1><h4>Some other message here</h4>';
+    content.innerHTML = '<h1 id="lose">I love Zelda</h1><h4>Some other message here</h4>';
 
     const zelda = document.createElement('h1');
     zelda.innerHTML = 'I love Zelda';
     content.appendChild(zelda);
 
-    const food = document.createElement('h1';
+    const food = document.createElement('h1');
+    food.innerHTML = 'I love Pizza';
+    content.insertAdjacentElement('afterbegin', food);
+
+
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector('#lose');
+    unwantedElement2.remove();
 </script>
 </body>
 </html>
